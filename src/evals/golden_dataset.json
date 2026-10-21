@@ -1,0 +1,66 @@
+[
+  {
+    "id": "eval-01",
+    "question": "What is the formula and standard constant for Reciprocal Rank Fusion?",
+    "target_doc_id": "rag-hybrid-search-spec",
+    "target_keywords": ["reciprocal rank fusion", "rrf_score", "smoothing constant", "60"],
+    "expected_answer": "RRF_Score(d) = sum(1.0 / (k + rank_r(d))) with smoothing constant k=60.",
+    "is_negative": false
+  },
+  {
+    "id": "eval-02",
+    "question": "Why do production RAG systems use a two-stage retrieve and rerank architecture?",
+    "target_doc_id": "rag-hybrid-search-spec",
+    "target_keywords": ["two-stage", "cross-encoder", "computational", "noise"],
+    "expected_answer": "Evaluating cross-encoders over all chunks is computationally prohibitive; stage 1 pulls top candidates fast, stage 2 reranks.",
+    "is_negative": false
+  },
+  {
+    "id": "eval-03",
+    "question": "What are the key hyperparameters controlling trade-offs in HNSW index construction and search?",
+    "target_doc_id": "vector-indexing-hnsw",
+    "target_keywords": ["hnsw", "m", "ef_construct", "ef_search"],
+    "expected_answer": "M sets bidirectional links, ef_construct controls graph build candidate size, and ef_search controls search-time latency vs recall.",
+    "is_negative": false
+  },
+  {
+    "id": "eval-04",
+    "question": "How does Scalar Quantization compare to Product Quantization in vector memory reduction?",
+    "target_doc_id": "vector-indexing-hnsw",
+    "target_keywords": ["scalar quantization", "product quantization", "fp32", "int8", "compression"],
+    "expected_answer": "Scalar quantization compresses FP32 to INT8 with a 4x reduction; product quantization achieves 16x-32x compression via codebooks.",
+    "is_negative": false
+  },
+  {
+    "id": "eval-05",
+    "question": "What metrics make up the core evaluation triad for RAG systems?",
+    "target_doc_id": "evals-and-ragas-metrics",
+    "target_keywords": ["recall@k", "mrr", "faithfulness", "citation precision", "relevance"],
+    "expected_answer": "Retrieval metrics (Recall@k, MRR), Generation metrics (Faithfulness, Relevance, Citation Precision), and Operational latency.",
+    "is_negative": false
+  },
+  {
+    "id": "eval-06",
+    "question": "What mathematical rank decomposition does LoRA apply to frozen model weights?",
+    "target_doc_id": "lora-qlora-finetuning",
+    "target_keywords": ["lora", "delta w", "b * a", "alpha / r", "frozen"],
+    "expected_answer": "W = W_0 + (B * A) * (alpha / r) where B and A are low-rank decomposition matrices and W_0 is frozen.",
+    "is_negative": false
+  },
+  {
+    "id": "eval-07",
+    "question": "What three innovations were introduced by QLoRA for 4-bit fine-tuning?",
+    "target_doc_id": "lora-qlora-finetuning",
+    "target_keywords": ["nf4", "normalfloat4", "double quantization", "paged optimizers"],
+    "expected_answer": "NF4 (NormalFloat4), Double Quantization (DQ), and Paged Optimizers using CUDA Unified Memory.",
+    "is_negative": false
+  },
+  {
+    "id": "eval-08",
+    "question": "What is the capital city of ancient Atlantis according to the documents?",
+    "target_doc_id": null,
+    "target_keywords": [],
+    "expected_answer": "The provided knowledge base does not contain sufficient evidence to answer this question.",
+    "is_negative": true
+  }
+]
