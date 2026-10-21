@@ -146,7 +146,7 @@ The microservice includes [`data/ecommerce_kb.md`](data/ecommerce_kb.md) powerin
 
 ### 1. Clone & Set Up Environment
 ```bash
-git clone https://github.com/yourusername/production-rag-engine.git
+git clone https://github.com/AhmedSalimpr/production-rag-engine.git
 cd production-rag-engine
 
 # Copy environment template
